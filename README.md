@@ -35,11 +35,12 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 ### Break-Even
 - When profit reaches 1x SL distance, SL moves to entry price
 
-### Trailing Stop
-- Activates after break-even is set
-- Initial reference: price at the moment break-even triggered
-- Each time price makes a new extreme (high for BUY, low for SELL) that exceeds the previous by 10+ pips, SL moves 10 pips from its current position toward more profit
-- SL never moves below entry price (break-even floor)
+### Trading Hours
+- No new trades within 30 minutes of market close or within 30 minutes of market open
+- If a position is open in the last 30 minutes before close:
+  - Profit >= 1:1 risk/reward → position is closed to secure gains
+  - Profit > 0 but < 1:1 → SL moves to break-even
+  - Position in loss → no action (original SL remains)
 
 ## Parameters
 
