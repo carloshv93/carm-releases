@@ -13,7 +13,7 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 
 1. Detect EMA crossover (EMA10 crossing EMA55)
 2. Confirm trend by waiting for minimum pip separation between EMAs
-3. Enter on price retracement to EMA55, or on wick rejection at EMA55
+3. Enter on price retracement to EMA55, or on wick rejection at EMA55 (candle must close on the correct side of EMA)
 4. Manage position with break-even stop and trailing stop
 
 ## Parameters
