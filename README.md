@@ -65,25 +65,19 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
    - `https://github.com` (auto-download of new versions)
 4. Click **OK**
 
-### 2. Allow DLL imports (required for auto-update install)
-
-1. When attaching the EA to a chart, go to the **Dependencies** tab
-2. Check **"Allow DLL imports"**
-
-Without DLL imports, the EA will still download the update but cannot install it automatically. It will alert you to copy the file manually from `MQL5\Files\` to `MQL5\Experts\`.
-
-### 3. Version blocking
+### 2. Version blocking
 
 If a minimum version is enforced remotely, the EA will refuse to initialize on outdated versions. Update to the latest version to resume trading.
 
 ## Auto-Update
 
-The EA checks for updates every hour via the Gist URL. When a new version is detected:
+The EA checks for updates every hour. When a new version is detected:
 
-1. Downloads the `.ex5` from GitHub Releases automatically
-2. Copies it to `MQL5\Experts\carm.ex5` (requires DLL imports enabled)
-3. Alerts you to restart the EA to apply the update
-
-If DLL imports are disabled, the file is saved to `MQL5\Files\carm_update.ex5` and an alert will instruct you to copy it manually.
+1. Downloads the `.ex5` from GitHub Releases to `MQL5\Files\carm.ex5`
+2. Shows an alert with instructions to install:
+   - Close MT5
+   - Copy `MQL5\Files\carm.ex5` to `MQL5\Experts\carm.ex5`
+   - Restart MT5
+   - (Use **File → Open Data Folder** to find the paths)
 
 If a minimum version is enforced, outdated EAs will refuse to initialize until updated.
