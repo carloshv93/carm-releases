@@ -14,7 +14,7 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 1. Detect EMA crossover (EMA10 crossing EMA55)
 2. Confirm trend by waiting for minimum pip separation between EMAs
 3. Enter on price retracement to EMA55, or on wick rejection at EMA55 (candle must close on the correct side of EMA)
-4. Manage position with break-even stop and trailing stop
+4. Manage position with break-even stop
 
 ## Parameters
 
@@ -53,10 +53,16 @@ If a minimum version is enforced remotely, the EA will refuse to initialize on o
 
 ## Position Management
 
+### SL / TP Calculation
+- SL = 3x the entry candle size (capped by MaxSlPips if set)
+- TP = 3x SL (1:3 risk/reward ratio)
+
 ### Break-Even
 - When profit reaches 1x SL distance, SL moves to entry price
+- After break-even is set, position runs to TP or gets stopped at entry
 
-### Trailing Stop
-- Activates after break-even is set
-- Each time price makes a new extreme that exceeds the previous by 10+ pips, SL moves 10 pips toward more profit
-- SL never moves below entry price (break-even floor)
+## Auto-Update
+
+The EA checks for updates every hour. If a new version is available, it downloads and installs automatically. If a minimum version is enforced, outdated versions will stop trading until updated.
+
+Restart the EA or wait up to 1 hour for the update to apply.
