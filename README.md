@@ -36,11 +36,8 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 - When profit reaches 1x SL distance, SL moves to entry price
 
 ### Trading Hours
-- No new trades within 30 minutes of market close or within 30 minutes of market open
-- If a position is open in the last 30 minutes before close:
-  - Profit >= 1:1 risk/reward → position is closed to secure gains
-  - Profit > 0 but < 1:1 → SL moves to break-even
-  - Position in loss → no action (original SL remains)
+- No new trades within 15 minutes of market close or within 15 minutes of market open
+- If a position is open in the last 15 minutes before close, it is closed immediately regardless of profit/loss
 
 ## Parameters
 
