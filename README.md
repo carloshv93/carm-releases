@@ -43,14 +43,8 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 
 | Input | Default | Description |
 |-------|---------|-------------|
-| LotSize | 0.01 | Trade volume |
-| EmaSlow | 55 | Slow EMA period |
-| EmaFast | 10 | Fast EMA period |
-| CrossMinPips | 5.0 | Minimum EMA separation (pips) to confirm trend |
+| LotSize | 0.00 | Trade volume (0 = auto: 0.01 per $1000 balance) |
 | MaxSlPips | 0 | Maximum SL in pips (0 = no cap) |
-| PipMultiplier | 100 | Point-to-pip multiplier (100 for gold) |
-| WickMinPips | 5.0 | Minimum wick size for wick entry |
-| WickEmaMaxDist | 3.0 | Max wick-to-EMA distance when wick doesn't touch EMA |
 
 ## Setup (MT5 Configuration)
 
