@@ -33,7 +33,7 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 - TP = 3x SL (1:3 risk/reward ratio)
 
 ### Break-Even
-- When profit reaches 1x SL distance, SL moves to entry price
+- When profit reaches 1x SL distance, SL moves to entry + 2 pips
 
 ### Trading Hours
 - No new trades within 15 minutes of market close or within 15 minutes of market open
