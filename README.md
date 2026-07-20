@@ -32,8 +32,9 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 - SL = 3x the entry candle size (capped by MaxSlPips if set)
 - TP = 3x SL (1:3 risk/reward ratio)
 
-### Break-Even
-- When profit reaches 1x SL distance, SL moves to entry + 2 pips
+### Trailing Stop
+- When profit reaches 1:1 (1x SL distance), SL moves to entry + 2 pips
+- When profit reaches 1:2 (2x SL distance), SL moves to lock in 1:1 profit
 
 ### Trading Hours
 - No new trades within 15 minutes of market close or within 15 minutes of market open
