@@ -1,6 +1,6 @@
 # carm
 
-Gold scalping Expert Advisor for MetaTrader 5 targeting XAU/USD on M1 timeframe using EMA crossover with trend confirmation.
+Gold scalping Expert Advisor for MetaTrader 5 targeting XAU/USD on M1 timeframe using EMA55 trend confirmation.
 
 Developed by Carlos Herrera | Telegram: @Carlos_Herrera_CR
 Strategy by Armando 9K | Telegram: @armando9k
@@ -11,9 +11,8 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 
 ## Strategy
 
-1. Detect EMA crossover (EMA10 crossing EMA55)
-2. Confirm trend by waiting for minimum pip separation between EMAs
-3. Enter on price retracement to EMA55, or on wick rejection at EMA55
+1. Detect trend by measuring EMA55 slope over the last 5 bars
+2. Enter on price retracement to EMA55, or on wick rejection at EMA55
 4. Manage position with break-even stop and trailing stop
 
 ### EMA Touch Entry
