@@ -17,7 +17,8 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 4. Manage position with break-even stop and trailing stop
 
 ### EMA Touch Entry
-- Current bid price must be within 25% of the current candle size from EMA55
+- In a BULL trend: ASK price must be at or below EMA55
+- In a BEAR trend: BID price must be at or above EMA55
 - Evaluated every tick while a trend is confirmed
 
 ### Wick Entry
@@ -30,7 +31,7 @@ Get the latest `.ex5` from the [Releases](https://github.com/carloshv93/carm-rel
 
 ### SL / TP Calculation
 - SL = 3x the entry candle size (capped by MaxSlPips if set)
-- TP = 3x SL (1:3 risk/reward ratio)
+- TP = 2.5x SL (1:2.5 risk/reward ratio)
 
 ### Trailing Stop
 - When profit reaches 1:1 (1x SL distance), SL moves to entry + 2 pips
